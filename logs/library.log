@@ -1,0 +1,215 @@
+2024-06-30 21:21:13 - Starting LibraryManagementSystemApplication using Java 17.0.11 with PID 38932 (P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes started by Vinod in P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem)
+2024-06-30 21:21:13 - No active profile set, falling back to 1 default profile: "default"
+2024-06-30 21:21:15 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-30 21:21:15 - Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2024-06-30 21:21:16 - Tomcat initialized with port 8088 (http)
+2024-06-30 21:21:16 - Starting service [Tomcat]
+2024-06-30 21:21:16 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-30 21:21:16 - Initializing Spring embedded WebApplicationContext
+2024-06-30 21:21:16 - Root WebApplicationContext: initialization completed in 2473 ms
+2024-06-30 21:21:16 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-30 21:21:16 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-30 21:21:16 - HHH000026: Second-level cache disabled
+2024-06-30 21:21:17 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-30 21:21:17 - HikariPool-1 - Starting...
+2024-06-30 21:21:17 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29892a77
+2024-06-30 21:21:17 - HikariPool-1 - Start completed.
+2024-06-30 21:21:17 - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-30 21:21:19 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-30 21:21:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:21:19 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+2024-06-30 21:21:19 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:21:19 - HikariPool-1 - Shutdown initiated...
+2024-06-30 21:21:19 - HikariPool-1 - Shutdown completed.
+2024-06-30 21:21:19 - Stopping service [Tomcat]
+2024-06-30 21:21:19 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-30 21:21:19 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.library.System.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10)
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 19 common frames omitted
+Caused by: java.lang.ClassCastException: class ch.qos.logback.classic.Logger cannot be cast to class java.util.logging.Logger (ch.qos.logback.classic.Logger is in unnamed module of loader 'app'; java.util.logging.Logger is in module java.logging of loader 'bootstrap')
+	at com.library.System.controllers.BooksController.<clinit>(BooksController.java:36)
+	... 27 common frames omitted
+2024-06-30 21:22:48 - Starting LibraryManagementSystemApplication using Java 17.0.11 with PID 33132 (P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes started by Vinod in P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem)
+2024-06-30 21:22:48 - No active profile set, falling back to 1 default profile: "default"
+2024-06-30 21:22:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-30 21:22:49 - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2024-06-30 21:22:50 - Tomcat initialized with port 8088 (http)
+2024-06-30 21:22:50 - Starting service [Tomcat]
+2024-06-30 21:22:50 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-30 21:22:51 - Initializing Spring embedded WebApplicationContext
+2024-06-30 21:22:51 - Root WebApplicationContext: initialization completed in 2547 ms
+2024-06-30 21:22:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-30 21:22:51 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-30 21:22:51 - HHH000026: Second-level cache disabled
+2024-06-30 21:22:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-30 21:22:52 - HikariPool-1 - Starting...
+2024-06-30 21:22:52 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a4b288a
+2024-06-30 21:22:52 - HikariPool-1 - Start completed.
+2024-06-30 21:22:52 - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-30 21:22:53 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-30 21:22:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:22:54 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+2024-06-30 21:22:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:22:54 - HikariPool-1 - Shutdown initiated...
+2024-06-30 21:22:54 - HikariPool-1 - Shutdown completed.
+2024-06-30 21:22:54 - Stopping service [Tomcat]
+2024-06-30 21:22:54 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-30 21:22:54 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.library.System.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10)
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 19 common frames omitted
+Caused by: java.lang.ClassCastException: class ch.qos.logback.classic.Logger cannot be cast to class java.util.logging.Logger (ch.qos.logback.classic.Logger is in unnamed module of loader 'app'; java.util.logging.Logger is in module java.logging of loader 'bootstrap')
+	at com.library.System.controllers.BooksController.<clinit>(BooksController.java:36)
+	... 27 common frames omitted
+2024-06-30 21:26:53 - Starting LibraryManagementSystemApplication using Java 17.0.11 with PID 24936 (P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes started by Vinod in P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem)
+2024-06-30 21:26:53 - No active profile set, falling back to 1 default profile: "default"
+2024-06-30 21:26:54 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-30 21:26:54 - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2024-06-30 21:26:55 - Tomcat initialized with port 8088 (http)
+2024-06-30 21:26:55 - Starting service [Tomcat]
+2024-06-30 21:26:55 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-30 21:26:55 - Initializing Spring embedded WebApplicationContext
+2024-06-30 21:26:55 - Root WebApplicationContext: initialization completed in 2363 ms
+2024-06-30 21:26:56 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-30 21:26:56 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-30 21:26:56 - HHH000026: Second-level cache disabled
+2024-06-30 21:26:56 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-30 21:26:56 - HikariPool-1 - Starting...
+2024-06-30 21:26:57 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@580c17a0
+2024-06-30 21:26:57 - HikariPool-1 - Start completed.
+2024-06-30 21:26:57 - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-30 21:26:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-30 21:26:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:26:59 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+2024-06-30 21:26:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:26:59 - HikariPool-1 - Shutdown initiated...
+2024-06-30 21:26:59 - HikariPool-1 - Shutdown completed.
+2024-06-30 21:26:59 - Stopping service [Tomcat]
+2024-06-30 21:26:59 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-30 21:26:59 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksController' defined in file [P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes\com\library\System\controllers\BooksController.class]: null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.library.System.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:10)
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 19 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.logging.Logger.getName()" because "com.library.System.controllers.BooksController.logger" is null
+	at com.library.System.controllers.BooksController.<clinit>(BooksController.java:39)
+	... 27 common frames omitted
+2024-06-30 21:29:36 - Starting LibraryManagementSystemApplication using Java 17.0.11 with PID 23400 (P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem\target\classes started by Vinod in P:\ChatServer\LibraryManagementSystem\LibraryManagementSystem)
+2024-06-30 21:29:36 - No active profile set, falling back to 1 default profile: "default"
+2024-06-30 21:29:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-30 21:29:37 - Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2024-06-30 21:29:38 - Tomcat initialized with port 8088 (http)
+2024-06-30 21:29:38 - Starting service [Tomcat]
+2024-06-30 21:29:38 - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-06-30 21:29:39 - Initializing Spring embedded WebApplicationContext
+2024-06-30 21:29:39 - Root WebApplicationContext: initialization completed in 2455 ms
+2024-06-30 21:29:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-30 21:29:39 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-30 21:29:39 - HHH000026: Second-level cache disabled
+2024-06-30 21:29:40 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-30 21:29:40 - HikariPool-1 - Starting...
+2024-06-30 21:29:40 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2830315f
+2024-06-30 21:29:40 - HikariPool-1 - Start completed.
+2024-06-30 21:29:40 - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-30 21:29:41 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-30 21:29:41 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:29:42 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-30 21:29:43 - Tomcat started on port 8088 (http) with context path '/'
+2024-06-30 21:29:43 - Started LibraryManagementSystemApplication in 7.765 seconds (process running for 8.409)
+2024-06-30 21:35:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-30 21:35:41 - Initializing Servlet 'dispatcherServlet'
+2024-06-30 21:35:41 - Completed initialization in 1 ms
+2024-06-30 21:35:42 - Init duration for springdoc-openapi is: 565 ms
+2024-06-30 21:53:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-30 21:53:12 - HikariPool-1 - Shutdown initiated...
+2024-06-30 21:53:12 - HikariPool-1 - Shutdown completed.

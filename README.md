@@ -43,3 +43,10 @@ Patch /borrowId/{borrowerId}/bookId/{bookId} : borrowingTheBook
 
 ##ExceptionHandling
  Used some pre-defined Exception but adde some user-defined exceptiosn in the exception package
+ 
+##Logging
+Logging is configured using Logback with default settings.
+
+##Kubernetes
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml

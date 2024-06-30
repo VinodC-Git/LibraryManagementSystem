@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: library-management-system
+spec:
+  replicas: 3  # Number of replicas (pods) to run
+  selector:
+    matchLabels:
+      app: library-management-system
+  template:
+    metadata:
+      labels:
+        app: library-management-system
+    spec:
+      containers:
+        - name: library-management-system
+          image: library-management-system:latest
+          ports:
+            - containerPort: 8088

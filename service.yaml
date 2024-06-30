@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: library-system-management-service
+spec:
+  selector:
+    app: library-management-system
+  ports:
+    - protocol: TCP
+      port: 8088        # listens on inside the container
+      targetPort: 8088   # listens on inside the container
+  type: LoadBalancer     # Type can be LoadBalancer. depending on your setup

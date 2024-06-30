@@ -14,9 +14,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public final class BorrowerResponseDTO {
     private Long id;
-    private @NotEmpty(message = "name should not be empty")
+    private @NotEmpty(message = "Name should not be empty")
+            @NotEmpty(message = "Name cannot be empty")
     String name;
-    @Email(message = "email should not be empty")
+    @NotNull(message = "Email cannot be null")
+    @NotEmpty(message = "Email cannot be empty")
+    @Email(message = "Email should be valid")
     private String emailAddress;
 
 
